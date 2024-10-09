@@ -35,6 +35,7 @@ function Cuadricula() {
             precio={priceUsd} 
             simbolo={symbol} 
             last24Hr={changePercent24Hr}
+            id = {id}
           />
         ))
         }
