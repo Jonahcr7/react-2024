@@ -1,0 +1,18 @@
+.home-main {
+    margin-left: 60px;
+    margin-right: 60px;
+    display: grid;
+    place-items: center;
+
+}
+
+.link-main {
+    /* text-decoration: none; Elimina el subrayado de los enlaces */
+    color: #ccc; /* Color de texto */
+    font-weight: bold; /* Negrita */
+    margin-top: 20px;
+  }
+
+  .p-main {
+    font-weight: bold;
+  }

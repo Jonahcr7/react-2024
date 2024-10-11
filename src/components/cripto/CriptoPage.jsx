@@ -7,9 +7,11 @@ const CriptoPage = () => {
 
     const parametro = useParams();
 
-    const cripto = usePetition(`assets/${parametro.id}`);
-    const historial = usePetition(`assets/${parametro.id}/history?interval=d1`);
+    const [cripto, cargandoCripto] = usePetition(`assets/${parametro.id}`);
+    const [historial, cargandoHistorial] = usePetition(`assets/${parametro.id}/history?interval=d1`);
 
+    if (cargandoCripto || cargandoHistorial) return <span>Cargando...</span>
+    
 
     return (
         <>

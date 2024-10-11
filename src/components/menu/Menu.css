@@ -1,3 +1,29 @@
-.main-menu a {
-    color: white;
-}
+.main-menu ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Hace que los elementos del <ul> estén en una fila */
+  }
+  
+  .main-menu li {
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+  }
+  
+  .main-menu li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+  }
+  
+  .main-menu a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color de texto */
+    font-weight: bold; /* Negrita */
+  }
+  
+  .main-menu {
+    margin-top: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }

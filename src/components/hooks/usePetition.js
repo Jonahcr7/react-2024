@@ -6,14 +6,21 @@ const usePetition = (endpoint) => {
     const URL_API = import.meta.env.VITE_API_URL;
 
     const [data, setData] = useState();
+    const [cargando, setCargando] = useState(false);
+
     useEffect(() => {
+        setCargando(true);
         axios.get(`${URL_API}${endpoint}`)
         .then(data => {
             setData(data.data.data);
+            setCargando(false)
         })
-        .catch(e => console.error(e));
+        .catch(e => {
+            setCargando(false);
+            console.error(e);
+        });
     }, []);
-    return data;
+    return [data, cargando];
 }
 
 export default usePetition;
